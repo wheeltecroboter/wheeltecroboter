@@ -1,0 +1,27 @@
+import os
+import sys
+import traceback
+from dotenv import load_dotenv
+from github import Github
+from src.gen_readme import generate_fetch, generate_readme
+
+def main():
+    try:
+        load_dotenv()
+        token = os.getenv("GITHUB_TOKEN")
+        if not token:
+            raise ValueError("GITHUB_TOKEN environment variable not set")
+            
+        g = Github(token)
+        generate_readme(g)
+        print("✨ README updated successfully! Wahooo!")
+        return 0
+        
+    except Exception as e:
+
+        print(f"❌ {e}", file=sys.stderr)
+
+        return 1
+
+if __name__ == "__main__":
+    sys.exit(main())

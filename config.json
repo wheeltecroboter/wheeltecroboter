@@ -1,0 +1,24 @@
+{
+    "display_stats": [
+        "username",
+        "bio",
+        "location",
+        "company",
+        "email",
+        "website",
+        "hireable",
+        "followers",
+        "following",
+        "public_repos",
+        "public_gists",
+        "total_stars",
+        "lines_of_code",
+        "created_at",
+        "updated_at",
+        "languages",
+        "total_commits",
+        "total_issues",
+        "total_prs"
+    ],
+    "additional_info": "This is some additional information that will be included in the README."
+}
