@@ -5,7 +5,6 @@
         "location",
         "company",
         "email",
-        "website",
         "hireable",
         "followers",
         "following",
@@ -20,5 +19,6 @@
         "total_issues",
         "total_prs"
     ],
-    "additional_info": "This is some additional information that will be included in the README."
+    "additional_info": "This is some additional information that will be included in the README. It can be anything you want!",
+    "preferred_color": "green"
 }
