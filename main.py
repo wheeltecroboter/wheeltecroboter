@@ -3,7 +3,7 @@ import sys
 import traceback
 from dotenv import load_dotenv
 from github import Github
-from src.gen_readme import generate_fetch, generate_readme
+from src.gen_readme import generate_fetch, generate_readme, gen_image
 
 def main():
     try:
@@ -13,7 +13,7 @@ def main():
             raise ValueError("GITHUB_TOKEN environment variable not set")
             
         g = Github(token)
-        generate_readme(g)
+        gen_image(g)
         print("✨ README updated successfully! Wahooo!")
         return 0
         
