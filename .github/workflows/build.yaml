@@ -26,12 +26,12 @@ jobs:
 
     - name: Run update script
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: python main.py
 
     - name: Commit and push changes
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
