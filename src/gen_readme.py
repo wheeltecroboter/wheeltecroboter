@@ -1,4 +1,4 @@
-import json, os
+import json, os, re 
 from src.draw_ascii import generate_logo
 from src.fetch_info import fetch_stats
 from PIL import Image, ImageDraw, ImageFont
@@ -249,8 +249,19 @@ def gen_image(g: Github):
     image.save("out/fetch.png")
     image.show()
 
-def generate_readme(g:Github):
-    content = generate_fetch(g)
-
+def generate_readme(g: Github):
+    gen_image(g)
+    
+    image_pattern = r'<div align=\'center\'>\s*<img src=\'out/fetch\.png\' alt=\'Github Fetch\'>\s*</div>'
+    image_content = "\n<div align='center'>\n  <img src='out/fetch.png' alt='Github Fetch'>\n</div>\n"
+    
+    try:
+        with open("README.md", "r", encoding="utf-8") as f:
+            content = f.read()
+            
+        if not re.search(image_pattern, content):
+            content = content.rstrip() + "\n\n" + image_content
+    except FileNotFoundError:
+        content = image_content
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
