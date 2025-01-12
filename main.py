@@ -8,9 +8,9 @@ from src.gen_readme import generate_fetch, generate_readme, gen_image
 def main():
     try:
         load_dotenv()
-        token = os.getenv("GITHUB_TOKEN")
+        token = os.getenv("GH_TOKEN")
         if not token:
-            raise ValueError("GITHUB_TOKEN environment variable not set")
+            raise ValueError("GH_TOKEN environment variable not set")
             
         g = Github(token)
         generate_readme(g)
