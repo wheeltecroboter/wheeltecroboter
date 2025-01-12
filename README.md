@@ -22,7 +22,7 @@ This repository helps you create an automatically updating GitHub profile README
 ### 3. Configure Repository
 1. Go to your fork's "Settings" → "Secrets and variables" → "Actions"
 2. Create new repository secret:
-   - Name: `GITHUB_TOKEN`
+   - Name: `GH_TOKEN`
    - Value: Your copied token
 
 ### 4. Enable Actions
