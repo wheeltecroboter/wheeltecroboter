@@ -20,7 +20,7 @@ def main():
     except Exception as e:
 
         print(f"❌ {e}", file=sys.stderr)
-
+        traceback.print_exc(file=sys.stderr)
         return 1
 
 if __name__ == "__main__":
