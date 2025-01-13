@@ -13,7 +13,7 @@ def main():
             raise ValueError("GH_TOKEN environment variable not set")
             
         g = Github(token)
-        gen_image(g)
+        generate_readme(g)
         print("✨ README updated successfully! Wahooo!")
         return 0
         
