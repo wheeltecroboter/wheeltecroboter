@@ -55,7 +55,7 @@ def return_preffered_color() -> tuple:
 def gen_image(g: Github):
     width, initial_height = 1200, 550
     ascii_width = 450
-    text_margin = 30
+    text_margin = 60
     
     bg_color = (0, 0, 0)
     value_color = return_preffered_color()
