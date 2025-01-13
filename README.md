@@ -45,8 +45,3 @@ Remove keys so they won't appear in your README :)!
   "ascii_art": "default"      // "default" or "minimal"
   //etc...
 }
-
-
-<div align='center'>
-  <img src='out/fetch.png' alt='Github Fetch'>
-</div>
