@@ -31,7 +31,7 @@ def get_lines_of_code(g: Github) -> int:
 def get_languages(g: Github) -> dict:
     languages = Counter()
     for repo in get_repos(g):
-        if repo.visibility == "public":  # Double check visibility again!
+        if not repo.fork and repo.visibility == "public":  # Double check visibility again!
             try:
                 for lang, bytes_count in repo.get_languages().items():
                     languages[lang] += bytes_count
