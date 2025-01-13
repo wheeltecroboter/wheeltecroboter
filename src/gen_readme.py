@@ -60,7 +60,7 @@ def gen_image(g: Github):
     bg_color = (0, 0, 0)
     value_color = return_preffered_color()
     text_color = (255, 255, 255)
-    font_size = 18
+    font_size = 16
 
     font = None
     font_paths = [
