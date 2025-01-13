@@ -250,23 +250,28 @@ def gen_image(g: Github):
     #image.show()
 
 def generate_readme(g: Github):
-    gen_image(g)
-    
-    image_pattern = r'<div align=\'center\'>\s*<img src=\'out/fetch\.png\' alt=\'Github Fetch\'>\s*</div>'
-    image_content = "\n## Example Output\n<div align='center'>\n  <img src='out/fetch.png' alt='Github Fetch'>\n</div>\n"
-    
-    try:
-        with open("README.md", "r", encoding="utf-8") as f:
-            content = f.read()
+        gen_image(g)
+        
+        image_pattern = r'<div align=\'center\'>\s*<img src=\'out/fetch\.png\' alt=\'Github Fetch\'>\s*</div>'
+        image_content = "\n## Example Output\n<div align='center'>\n  <img src='out/fetch.png' alt='Github Fetch'>\n</div>\n"
+        
+        try:
+            with open("README.md", "r", encoding="utf-8") as f:
+                content = f.read()
+                
+            start_comment = "<!--- START OF DELETION --->"
+            end_comment = "<!--- END OF DELETION --->"
+            pattern = re.compile(f"{start_comment}.*?{end_comment}", re.DOTALL)
+            content = re.sub(pattern, "", content)
             
-        start_comment = "<!--- START OF DELETION --->"
-        end_comment = "<!--- END OF DELETION --->"
-        pattern = re.compile(f"{start_comment}.*?{end_comment}", re.DOTALL)
-        content = re.sub(pattern, "", content)
-        if not re.search(image_pattern, content):
-            content = content.rstrip() + "\n\n" + image_content
-    except FileNotFoundError:
-        content = image_content
-    
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(content)
+            with open("config.json", "r") as f:
+                config = json.load(f)
+            append_automatic = config.get("append_automatic", True)
+            
+            if append_automatic and not re.search(image_pattern, content):
+                content = content.rstrip() + "\n\n" + image_content
+        except FileNotFoundError:
+            content = image_content
+        
+        with open("README.md", "w", encoding="utf-8") as f:
+            f.write(content)

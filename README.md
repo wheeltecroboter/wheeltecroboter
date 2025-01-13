@@ -71,9 +71,14 @@ Remove keys to exclude them from your README.
   ],
   "additional_info": "", // some additional information you can provide :)
   "preferred_color": "lightblue", // color it will be printed out in
-  "max_languages": 5 // number of max. biggest languages displayed in the fetch
+  "max_languages": 5, // number of max. biggest languages displayed in the fetch
+  "append_autmatic": true // appends the embedded image automatically if not found in README 
 }
 ```
+### Editing the README
+
+After the initial deployment, you can edit the `README.md` file however you want!
+
 ## Disclaimer
 
 Use this script at your own risk. The software is provided "as is", without warranty of any kind, express or implied, as stated in the MIT License.

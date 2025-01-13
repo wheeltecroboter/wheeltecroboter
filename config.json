@@ -21,5 +21,6 @@
     ],
     "additional_info": "",
     "preferred_color": "lightblue",
-    "max_languages": 5
+    "max_languages": 5,
+    "append_automatic": true
 }
