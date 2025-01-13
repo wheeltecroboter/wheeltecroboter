@@ -1,4 +1,4 @@
-name: UPDATE README
+name: Start Workflow
 
 on:
   schedule:

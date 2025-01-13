@@ -259,6 +259,10 @@ def generate_readme(g: Github):
         with open("README.md", "r", encoding="utf-8") as f:
             content = f.read()
             
+        start_comment = "<!--- START OF DELETION --->"
+        end_comment = "<!--- END OF DELETION --->"
+        pattern = re.compile(f"{start_comment}.*?{end_comment}", re.DOTALL)
+        content = re.sub(pattern, f"{start_comment}\n\n{end_comment}", content)
         if not re.search(image_pattern, content):
             content = content.rstrip() + "\n\n" + image_content
     except FileNotFoundError:
