@@ -14,7 +14,7 @@ def get_lines_of_code(g: Github) -> int:
     total_lines = 0
 
     for repo in get_repos(g):
-        if repo.visibility == "public":  # Double check visibility ! I don't want to count private repos in order to respect the user's privacy.
+        if not repo.fork and repo.visibility == "public":  # Double check visibility ! I don't want to count private repos in order to respect the user's privacy.
             try:
                 languages = repo.get_languages()
                 total_lines += sum(languages.values())
