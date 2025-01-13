@@ -247,7 +247,7 @@ def gen_image(g: Github):
 
     os.makedirs("out", exist_ok=True)
     image.save("out/fetch.png")
-    image.show()
+    #image.show()
 
 def generate_readme(g: Github):
     gen_image(g)
