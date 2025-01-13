@@ -64,6 +64,8 @@ def gen_image(g: Github):
 
     font = None
     font_paths = [
+        "monospace",
+        "monospace.ttf",
         "/usr/share/fonts/truetype/ubuntu/UbuntuMono-R.ttf",
         "DejaVuSansMono.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
