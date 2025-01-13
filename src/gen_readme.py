@@ -60,7 +60,7 @@ def gen_image(g: Github):
     bg_color = (0, 0, 0)
     value_color = return_preffered_color()
     text_color = (255, 255, 255)
-    font_size = 16
+    font_size = 18
 
     font = None
     font_paths = [
@@ -235,15 +235,15 @@ def gen_image(g: Github):
                         draw.text((x_current, y_offset), ' '.join(line), fill=text_color, font=font)
                         y_offset += line_spacing
 
-    prompt_y = new_height - line_spacing if y_offset > initial_height else initial_height - line_spacing
-    x_prompt = 10
-    draw.text((x_prompt, prompt_y), g.get_user().login, fill=value_color, font=font)
-    x_prompt += font.getlength(g.get_user().login)
-    draw.text((x_prompt, prompt_y), "@", fill=(255,255,255), font=font) 
-    x_prompt += font.getlength("@")
-    draw.text((x_prompt, prompt_y), "github", fill=value_color, font=font)  
-    x_prompt += font.getlength("githubdotcom")
-    draw.text((x_prompt, prompt_y), ": $", fill=text_color, font=font)
+    # prompt_y = new_height - line_spacing if y_offset > initial_height else initial_height - line_spacing
+    # x_prompt = 10
+    # draw.text((x_prompt, prompt_y), g.get_user().login, fill=value_color, font=font)
+    # x_prompt += font.getlength(g.get_user().login)
+    # draw.text((x_prompt, prompt_y), "@", fill=(255,255,255), font=font) 
+    # x_prompt += font.getlength("@")
+    # draw.text((x_prompt, prompt_y), "github", fill=value_color, font=font)  
+    # x_prompt += font.getlength("githubdotcom")
+    # draw.text((x_prompt, prompt_y), ": $", fill=text_color, font=font)
 
     os.makedirs("out", exist_ok=True)
     image.save("out/fetch.png")

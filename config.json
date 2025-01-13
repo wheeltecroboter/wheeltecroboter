@@ -20,5 +20,6 @@
         "total_prs"
     ],
     "additional_info": "",
-    "preferred_color": "lightblue"
+    "preferred_color": "lightblue",
+    "max_languages": 5
 }
