@@ -253,7 +253,7 @@ def generate_readme(g: Github):
     gen_image(g)
     
     image_pattern = r'<div align=\'center\'>\s*<img src=\'out/fetch\.png\' alt=\'Github Fetch\'>\s*</div>'
-    image_content = "\n<div align='center'>\n  <img src='out/fetch.png' alt='Github Fetch'>\n</div>\n"
+    image_content = "\n## Example Output\n<div align='center'>\n  <img src='out/fetch.png' alt='Github Fetch'>\n</div>\n"
     
     try:
         with open("README.md", "r", encoding="utf-8") as f:
@@ -263,5 +263,6 @@ def generate_readme(g: Github):
             content = content.rstrip() + "\n\n" + image_content
     except FileNotFoundError:
         content = image_content
+    
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
