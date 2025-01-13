@@ -55,7 +55,7 @@ def return_preffered_color() -> tuple:
 def gen_image(g: Github):
     width, initial_height = 1200, 550
     ascii_width = 450
-    text_margin = 20
+    text_margin = 30
     
     bg_color = (0, 0, 0)
     value_color = return_preffered_color()
@@ -64,13 +64,11 @@ def gen_image(g: Github):
 
     font = None
     font_paths = [
-        "monospace",
-        "monospace.ttf",
-        "/usr/share/fonts/truetype/ubuntu/UbuntuMono-R.ttf",
-        "DejaVuSansMono.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+        "/usr/share/fonts/truetype/ubuntu/UbuntuMono-R.ttf",
         "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf",
-        "consola.ttf"  # Because I wrote this on Windows :|
+        "monospace",
+        "consola.ttf"
     ]
     
     fetch = generate_fetch(g)
