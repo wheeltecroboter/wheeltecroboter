@@ -16,7 +16,7 @@
 3. **Name**: `ReadmeFetch Token` (or any name you prefer).
 4. **Expiration**: Choose as needed (recommended: never expire).
 5. **Select scopes**:
-   - ✅ `workflow` (Full repository access)
+   - ✅ `workflow`
 6. Click **"Generate"**.
 7. 📝 **COPY THE TOKEN** - You won't see it again!
 
@@ -30,7 +30,7 @@
 1. Go to the **"Actions"** tab.
 2. Click **"I understand my workflows, go ahead and enable them"**.
 3. On the left sidebar, go to **"Start Workflow"**.
-4. A message saying something like **"This scheduled workflow is disabled because scheduled workflows are disabled by default in forks."** should appear.
+4. A message saying something like **"This scheduled workflow is disabled because scheduled workflows are disabled by default in forks."** should appear (This is because I disabled the script, otherwise it would always run on this repo and remove the instructions)
 5. Click **"Enable workflow"**.
 6. Click **"Run workflow"**.
 7. Enjoy! 🎉
