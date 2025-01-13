@@ -11,7 +11,7 @@
         "public_repos",
         "public_gists",
         "total_stars",
-        "lines_of_code",
+        "bytes_of_code",
         "created_at",
         "updated_at",
         "languages",
