@@ -134,7 +134,7 @@ def gen_image(g: Github):
                             y_offset += line_spacing
                 if line:
                     draw.text((x_current, y_offset), ' '.join(line), fill=text_color, font=font)
-                    y_offset += line_spacing
+                y_offset += line_spacing
             else:
                 words = info_line.split()
                 line = []
@@ -159,7 +159,7 @@ def gen_image(g: Github):
                 
                 if line:
                     draw.text((x_current, y_offset), ' '.join(line), fill=text_color, font=font)
-                    y_offset += line_spacing
+                y_offset += line_spacing
 
     # Check if the text goes out of bounds and adjust the image height if necessary
     if y_offset > initial_height:
