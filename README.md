@@ -8,12 +8,11 @@
 ### 1. Repository Setup
 1. **Fork this repository** to your own GitHub account.
 2. ⚠️ **Important**: Rename the forked repository to match your GitHub username exactly. 
-   - **If you want this to appear on your profile of course - you can name it whatever you want to just check it out, but if you want the fetch to appear on your profile, it has to match your username**
-   - Example: `username/username`
+- *Note: To display on your profile, repository name must match your username exactly. Otherwise, any name works for testing.*   - Example: `username/username`
 
 ### 2. Create a GitHub Token
 
-**Why is this necessary? -> Because the Python Script uses PyGithub which rate limits requests with no tokens to 60 Requests/ Hour and with a Token to 5000 Requests / Hour. Without a Token, the rate limit will be hit really quickly and this script won't work (trust me I tried)**
+- *Why is this necessary? -> Because the Python Script uses PyGithub which rate limits requests with no tokens to 60 Requests/ Hour and with a Token to 5000 Requests / Hour. Without a Token, the rate limit will be hit really quickly and this script won't work (trust me I tried)**
 
 1. Go to [GitHub Settings → Developer Settings → Personal Access Tokens → Tokens (classic)](https://github.com/settings/tokens).
 2. Click **"Generate new token (classic)"**.
@@ -35,7 +34,7 @@
 2. Click **"I understand my workflows, go ahead and enable them"**.
 3. On the left sidebar, go to **"Start Workflow"**.
 4. A message saying something like **"This scheduled workflow is disabled because scheduled workflows are disabled by default in forks."** should appear.
-   - **This is because I disabled the script, otherwise it would always run on this repo and remove the instructions (if anyone knows a better solution, lmk!)**
+- *This is because I disabled the script, otherwise it would always run on this repo and remove the instructions (if anyone knows a better solution, lmk!)**
 5. Click **"Enable workflow"**.
 6. Click **"Run workflow"**.
 7. Enjoy! 🎉
