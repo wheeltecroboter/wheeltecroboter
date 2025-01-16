@@ -6,22 +6,16 @@
 ## 🚀 Setup
 
 ### 1. Repository Setup
-1. **Fork this repository** to your own GitHub account.
-2. ⚠️ **Important**: Rename the forked repository to match your GitHub username exactly. 
-- *Note: To display on your profile, repository name must match your username exactly. Otherwise, any name works for testing.*   - Example: `username/username`
+1. **Fork this repository**.
+2. **Rename the fork** to match your GitHub username (e.g., `username/username`).
 
 ### 2. Create a GitHub Token
-
-- *Why is this necessary? -> Because the Python Script uses PyGithub which rate limits requests with no tokens to 60 Requests/ Hour and with a Token to 5000 Requests / Hour. Without a Token, the rate limit will be hit really quickly and this script won't work (trust me I tried)**
-
 1. Go to [GitHub Settings → Developer Settings → Personal Access Tokens → Tokens (classic)](https://github.com/settings/tokens).
 2. Click **"Generate new token (classic)"**.
-3. **Name**: `ReadmeFetch Token` (or any name you prefer).
-4. **Expiration**: Choose as needed (recommended: never expire).
-5. **Select scopes**:
-   - ✅ `workflow`
-6. Click **"Generate"**.
-7. 📝 **COPY THE TOKEN** - You won't see it again!
+3. **Name**: `ReadmeFetch Token`.
+4. **Expiration**: Choose as needed.
+5. **Select scopes**: `workflow`.
+6. Click **"Generate"** and **copy the token**.
 
 ### 3. Configure the Repository
 1. Go to your fork's **"Settings" → "Secrets and variables" → "Actions"**.
@@ -31,13 +25,8 @@
 
 ### 4. Enable Actions
 1. Go to the **"Actions"** tab.
-2. Click **"I understand my workflows, go ahead and enable them"**.
-3. On the left sidebar, go to **"Start Workflow"**.
-4. A message saying something like **"This scheduled workflow is disabled because scheduled workflows are disabled by default in forks."** should appear.
-- *This is because I disabled the script, otherwise it would always run on this repo and remove the instructions (if anyone knows a better solution, lmk!)**
-5. Click **"Enable workflow"**.
-6. Click **"Run workflow"**.
-7. Enjoy! 🎉
+2. Click **"Enable workflow"**.
+3. Click **"Run workflow"**.
 
 ⚠️ **Note**: It might take a couple of seconds until your new README appears! 😊
 
