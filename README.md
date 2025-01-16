@@ -12,10 +12,10 @@
 ### 2. Create a GitHub Token
 1. Go to [GitHub Settings → Developer Settings → Personal Access Tokens → Tokens (classic)](https://github.com/settings/tokens).
 2. Click **"Generate new token (classic)"**.
-3. **Name**: `ReadmeFetch Token`.
-4. **Expiration**: Choose as needed.
+3. **Name**: `whatever you want (e.g Readmefetch Token)`.
+4. **Expiration**: Choose as needed. Never recommended, otherwise it won't automatically update
 5. **Select scopes**: `workflow`.
-6. Click **"Generate"** and **copy the token**.
+6. Click **"Generate"** and **copy the token**! You will never see it again!
 
 ### 3. Configure the Repository
 1. Go to your fork's **"Settings" → "Secrets and variables" → "Actions"**.
